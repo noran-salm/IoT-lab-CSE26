@@ -1,0 +1,88 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: white;
+    width: 90%;
+    max-width: 500px;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #1e293b;
+}
+
+p {
+    color: #64748b;
+}
+
+.slider-container {
+    margin-top: 35px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+    accent-color: #2563eb;
+}
+
+.value-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    color: #475569;
+}
+
+#slider-value {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+
+.slider-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 30px auto;
+}
+
+#control-slider {
+    width: 100%;
+    cursor: pointer;
+    accent-color: #2563eb;
+}
+
+.range-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.slider-container p {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 20px;
+}
