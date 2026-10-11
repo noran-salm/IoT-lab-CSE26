@@ -34,36 +34,6 @@ p {
 .slider-container {
     margin-top: 35px;
     text-align: left;
-}
-
-label {
-    display: block;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-
-input[type="range"] {
-    width: 100%;
-    cursor: pointer;
-    accent-color: #2563eb;
-}
-
-.value-display {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-    color: #475569;
-}
-
-#slider-value {
-    font-size: 32px;
-    font-weight: bold;
-    color: #2563eb;
-}
-
-
-.slider-container {
     width: 100%;
     max-width: 500px;
     margin: 30px auto;
@@ -75,14 +45,17 @@ input[type="range"] {
     accent-color: #2563eb;
 }
 
-.range-labels {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 8px;
-}
 
 .slider-container p {
     text-align: center;
     margin-top: 25px;
     font-size: 20px;
+}
+
+.range-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    color: #666;
+    font-size: 14px;
 }

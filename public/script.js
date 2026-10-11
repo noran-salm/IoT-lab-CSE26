@@ -1,31 +1,22 @@
+var slider = document.getElementById('control-slider');
+var current = document.getElementById('current-value');
+var HOST = location.origin.replace(/^http/,'ws');
+var ws = new WebSocket(HOST);
 
-const slider = document.getElementById('control-slider');
-const currentValue = document.getElementById('current-value');
+slider.addEventListener('input',function(){
+const value = Number(slider.value);
 
-slider.addEventListener('input', async function () {
-    const value = Number(slider.value);
+current.textContent=value;
 
-    // Update the displayed value
-    currentValue.textContent = value;
-
-    // Send the value to Node.js
-    try {
-        const response = await fetch('/slider', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ value: value })
-        });
-
-        if (!response.ok) {
-            throw new Error(`HTTP error: ${response.status}`);
-        }
-
-        const result = await response.json();
-        console.log('Server response:', result);
-
-    } catch (error) {
-        console.error('Failed to send value:', error);
-    }
+ws.send(String(value));
 });
+ws.onopen = function(){
+    console.log("connected to server");
+}
+ws.onclose=function(){
+ console.log("connection lost");
+}
+ws.onmessage=function(event){
+slider.value=event.data;
+current.textContent=event.data;
+}
